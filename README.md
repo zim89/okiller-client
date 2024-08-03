@@ -1,30 +1,88 @@
-# React + TypeScript + Vite
+# OLX Killer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This project aims to build a marketplace platform similar to [OLX](https://olx.ua) with a key difference: strict filtering and verification processes to eliminate realtors, resellers, and other intermediaries. The platform is designed to ensure that all listings are genuine and directly from individual sellers.
 
-Currently, two official plugins are available:
+## Tech Stack
+- **React + Vite**: For building the user interface and optimizing the development workflow.
+- **Tailwind CSS**: For styling the application with utility-first CSS.
+- **Shadcn/ui**: For utilizing pre-built UI components.
+- **React Router DOM**: For client-side routing.
+- **Auth0**: For handling user authentication and authorization.
+- **TanStack Query**: For managing server-state and data-fetching.
+- **Zustand/Context/LocalStorage**: For state management.
+- **i18next**: For internationalization support.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
+The project follows a combination of Feature-Sliced Design (FSD), Domain-Driven Design (DDD), and Atomic Design principles to ensure scalability, maintainability, and a clear separation of concerns.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### src Directory Layout
+```plaintext
+src/
+├── api/
+│   └── axios.ts
+├── app/
+│   ├── Providers.tsx
+│   └── routes.tsx
+├── assets/
+│   └── react.svg
+├── components/
+│   ├── Footer/
+│   ├── Header/
+│   └── ui/
+├── constants/
+│   └── page.const.ts
+├── data/
+│   └── links.data.ts
+├── helpers/
+│   └── api.helpers.ts
+├── hooks/
+│   └── .gitkeep
+├── layouts/
+│   └── RootLayout.tsx
+├── lib/
+│   └── utils.ts
+├── pages/
+│   ├── Home/
+│   └── Profile/
+├── services/
+│   └── category/
+│       └── category.service.ts
+├── types/
+├── index.css
+├── main.tsx
+└── vite-env.d.ts
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Setup and Installation
+To get started with the project, follow these steps:
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/zim89/okiller-client.git
+    cd okiller-client
+    ```
+
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3. **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+
+## Features
+- **User Authentication**: Secure login and registration with Auth0.
+- **Responsive Design**: Fully responsive design with Tailwind CSS.
+- **Product Listings**: Browse and search for products with detailed filters.
+- **Profile Management**: User profiles to manage listings and account settings.
+- **Strict Verification**: Robust verification system to ensure all listings are genuine and from individual sellers.
+
+## Contact
+For any questions or feedback, please reach out to us at [email@example.com](mailto:email@example.com).
+
+---
+
+We are committed to building a secure and reliable marketplace platform. Thank you for your interest and support!
