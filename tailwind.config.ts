@@ -10,17 +10,19 @@ const config = {
   ],
   prefix: '',
   theme: {
+    screens: {
+      xs: '375px',
+      xl: '1440px',
+    },
     container: {
       center: true,
-      padding: '2rem',
-      screens: {
-        xs: '375px',
-        xl: '1440px',
+      padding: {
+        DEFAULT: '11px',
+        xl: '80px',
       },
     },
     extend: {
       colors: {
-        gray: { }
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
