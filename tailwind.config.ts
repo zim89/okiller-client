@@ -12,12 +12,14 @@ const config = {
   theme: {
     screens: {
       xs: '375px',
+      md: '768px',
       xl: '1440px',
     },
     container: {
       center: true,
       padding: {
         DEFAULT: '11px',
+        md: '110px',
         xl: '80px',
       },
     },
