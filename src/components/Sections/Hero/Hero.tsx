@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from '@/components/ui/carousel'
-import { Picture } from '@/components/Picture'
+import { Picture } from '@/components/shared'
 import { cn } from '@/lib/utils'
 import { HERO_DATA } from '@/data/hero.data'
 

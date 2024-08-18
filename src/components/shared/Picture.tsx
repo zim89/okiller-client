@@ -4,13 +4,13 @@ export const Picture = ({
   src,
   srcset,
   alt,
-  type,
+  type = 'image/jpeg',
   styles,
 }: {
   src: string
   srcset: { width: number; items: string[] }[]
   alt: string
-  type: string
+  type?: string
   styles?: string
 }) => {
   const MEDIA_QUERIES = ['(min-width: 1440px)', '(min-width: 320px)']

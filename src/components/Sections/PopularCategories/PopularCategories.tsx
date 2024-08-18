@@ -5,8 +5,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
-import { Picture } from '@/components/Picture'
-import { SectionTitle } from '@/components/SectionTitle'
+import { Picture, SectionTitle } from '@/components/shared'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { CATEGORIES_DATA } from '@/data/categories.data'
 
