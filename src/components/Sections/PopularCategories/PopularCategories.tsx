@@ -63,7 +63,7 @@ export const PopularCategories = () => {
             </CollapsibleContent>
           </div>
 
-          <CollapsibleTrigger className='w-full rounded-[60px] border border-border py-[13px] text-center text-[13px]/[13px] xl:text-base/4'>
+          <CollapsibleTrigger className='w-full rounded-[60px] border border-border py-[13px] text-center text-[13px]/[13px] transition-colors duration-300 hover:bg-accent hover:text-accent-foreground xl:text-base/4'>
             {isOpen ? 'Show less' : 'Show all categories'}
           </CollapsibleTrigger>
         </Collapsible>
