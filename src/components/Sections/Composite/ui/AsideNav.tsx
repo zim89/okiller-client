@@ -36,7 +36,7 @@ export const AsideNav = () => {
                         {sub.items.map(item => (
                           <li key={item.label}>
                             <Link to={item.href}>
-                              <MenubarItem className='inline-block cursor-pointer bg-none p-0 text-base/[19.36px] font-normal transition-colors duration-300 after:absolute after:-bottom-px after:left-0 after:block after:h-px after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full focus:bg-background focus:text-accent'>
+                              <MenubarItem className='inline-block cursor-pointer bg-none p-0 text-base/[19.36px] font-normal transition-colors duration-300 focus:bg-background focus:text-accent'>
                                 {item.label}
                               </MenubarItem>
                             </Link>
