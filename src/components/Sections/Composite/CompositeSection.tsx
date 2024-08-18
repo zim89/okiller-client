@@ -4,7 +4,7 @@ import { AsideNav } from './ui/AsideNav'
 
 export const CompositeSection = () => {
   return (
-    <section className='flex gap-[49px]'>
+    <section className='flex items-start gap-[15px]'>
       <AsideNav />
       <div className='flex-1'>
         <div className='flex items-start gap-5'>
