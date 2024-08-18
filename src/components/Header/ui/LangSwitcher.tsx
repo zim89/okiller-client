@@ -13,14 +13,20 @@ export const LangSwitcher = () => {
   const [value, setValue] = useState('EN')
   return (
     <Select value={value} onValueChange={setValue}>
-      <SelectTrigger className='w-[35px] border-0 bg-primary p-0 text-[13px] text-primary-foreground ring-0 ring-offset-0 focus:ring-0 focus:ring-offset-0'>
+      <SelectTrigger className='w-[35px] border-0 bg-primary p-0 text-[13px] text-primary-foreground ring-0 ring-offset-0 transition-colors duration-300 hover:text-accent focus:ring-0 focus:ring-offset-0 data-[state=open]:text-accent'>
         <SelectValue>{value}</SelectValue>
       </SelectTrigger>
       <SelectContent className='space-y-[5px] rounded-[11px] bg-background px-[21px] py-3 shadow-[1px_1px_5px_0_rgba(78,78,78,0.19)]'>
-        <SelectItem value='EN' className='text-[13px]'>
+        <SelectItem
+          value='EN'
+          className='cursor-pointer rounded-none text-[13px] font-medium transition-colors duration-300 focus:bg-background focus:text-accent data-[state=open]:text-accent'
+        >
           {LANGUAGES.EN}
         </SelectItem>
-        <SelectItem className='text-[13px]' value='UA'>
+        <SelectItem
+          className='cursor-pointer rounded-none text-[13px] font-medium transition-colors duration-300 focus:bg-background focus:text-accent data-[state=open]:text-accent'
+          value='UA'
+        >
           {LANGUAGES.UA}
         </SelectItem>
       </SelectContent>
