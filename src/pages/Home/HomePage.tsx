@@ -1,3 +1,8 @@
+import { BestDeals, PromoSection } from '@/components/Sections'
+
 export const HomePage = () => {
-  return <div>Home page</div>;
+  return <>
+    <BestDeals />
+    <PromoSection />
+  </>;
 };
