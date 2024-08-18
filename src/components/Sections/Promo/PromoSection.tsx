@@ -1,12 +1,13 @@
 import React from 'react';
-import { Button } from '@/components/ui/button.tsx'
+import { Button } from '@/components/ui'
 import { LongArrowAltRightIcon } from '@/components/ui/icons-pack.tsx'
+import { Banner } from '@/assets'
 
 export const PromoSection: React.FC = () => {
   return (
-    <section className="container pt-[170px] lg:pt-[138px] relative">
+    <section className="container pt-[170px] xl:pt-[138px] relative">
       <img
-        src="../../src/assets/baner.png"
+        src={Banner}
         alt="Laptop"
         className="hidden xl:block w-full"
       />

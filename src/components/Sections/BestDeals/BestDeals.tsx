@@ -1,10 +1,10 @@
-import { ItemCard } from '@/components/shared/ItemCard.tsx'
-import { items } from '@/constants/items.constant.tsx'
-import { Button } from '@/components/ui/button.tsx'
+import { ItemCard } from '@/components/shared'
+import { items } from '@/data/bestDeals.data.ts'
+import { Button } from '@/components/ui'
 
 export const BestDeals = () => {
   return (
-      <section className="container flex flex-col gap-5">
+      <section className="container flex flex-col gap-5 pt-[83px] xl:pt-[122px]">
         <h2 className="h-[29px] font-medium text-[26px] text-foreground">Best deals</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 self-center">
           {items.map((item) => (

@@ -1,5 +1,4 @@
-import { BestDeals } from '@/components/BestDeals.tsx'
-import { PromoSection } from '@/components/PromoSection.tsx'
+import { BestDeals, PromoSection } from '@/components/Sections'
 
 export const HomePage = () => {
   return <>

@@ -1,7 +1,7 @@
-import { footerContent } from '@/constants/footer.links.ts'
 import { FacebookIcon, InstagramIcon } from '@/components/ui/icons-pack.tsx'
 import { Separator } from '@/components/ui/separator.tsx'
 import { Button } from '@/components/ui/button.tsx'
+import { footerContent } from '@/data/links.data.ts'
 
 
 export const Footer = () => {
