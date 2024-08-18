@@ -25,7 +25,7 @@ export const PopularCategories = () => {
               {categories.slice(0, isDesktop ? 7 : 6).map(cat => (
                 <li key={cat.name}>
                   <Link to={`/`} className='space-y-[15px]'>
-                    <div className='size-[172px] rounded-full'>
+                    <div className='size-[172px] rounded-full xl:size-[150px]'>
                       <Picture
                         src={cat.image.src}
                         alt={cat.image.alt}

@@ -45,6 +45,11 @@ import {
   TvIcon,
 } from '@/components/ui/icons-pack'
 
+interface SubCategory {
+  label: string
+  items: { label: string; href: string }[]
+}
+
 interface Category {
   name: string
   title: string
@@ -56,7 +61,61 @@ interface Category {
     srcset: { width: number; items: string[] }[]
   }
   rating: number
+  sub: SubCategory[]
 }
+
+const SUB_DATA: SubCategory[] = [
+  {
+    label: "Women's Clothing",
+    items: [
+      { label: 'Dresses', href: '/' },
+      { label: 'Tops and Blouses', href: '/' },
+      { label: 'Pants and Jeans', href: '/' },
+      { label: 'Skirts', href: '/' },
+      { label: 'Outerwear', href: '/' },
+    ],
+  },
+  {
+    label: "Men's Clothing",
+    items: [
+      { label: 'Shirts', href: '/' },
+      { label: 'Trousers and Jeans', href: '/' },
+      { label: 'Jackets and Coats', href: '/' },
+      { label: 'Suits and Blazers', href: '/' },
+      { label: 'Active wear', href: '/' },
+    ],
+  },
+  {
+    label: "Kids' Clothing",
+    items: [
+      { label: 'Boys Clothing', href: '/' },
+      { label: 'Girls Clothing', href: '/' },
+      { label: 'Baby Clothing', href: '/' },
+      { label: 'School Uniforms', href: '/' },
+      { label: 'Outerwear', href: '/' },
+    ],
+  },
+  {
+    label: 'Footwear',
+    items: [
+      { label: "Women's Footwear", href: '/' },
+      { label: "Men's Footwear", href: '/' },
+      { label: 'Kids Footwear', href: '/' },
+      { label: 'Sports Shoes', href: '/' },
+      { label: 'Boots', href: '/' },
+    ],
+  },
+  {
+    label: 'Accessories',
+    items: [
+      { label: 'Bags and Purses', href: '/' },
+      { label: 'Hats and Caps', href: '/' },
+      { label: 'Scarves and Gloves', href: '/' },
+      { label: 'Belts', href: '/' },
+      { label: 'Jewelry and Watches', href: '/' },
+    ],
+  },
+]
 
 export const CATEGORIES_DATA: Category[] = [
   {
@@ -73,6 +132,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 4,
+    sub: SUB_DATA,
   },
   {
     name: 'electronics',
@@ -88,6 +148,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 4,
+    sub: SUB_DATA,
   },
   {
     name: 'beauty&health',
@@ -103,6 +164,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 4,
+    sub: SUB_DATA,
   },
   {
     name: 'children_products',
@@ -118,6 +180,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'sports&recreation',
@@ -133,6 +196,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'automotive_products',
@@ -148,6 +212,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'books&stationery',
@@ -163,6 +228,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'food&groceries',
@@ -178,6 +244,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'gifts&souvenirs',
@@ -193,6 +260,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'pets&supplies',
@@ -208,6 +276,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 4,
+    sub: SUB_DATA,
   },
   {
     name: 'furniture&interior',
@@ -223,6 +292,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'construction&repair',
@@ -238,6 +308,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'musical_instruments',
@@ -253,6 +324,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'arts&crafts',
@@ -268,6 +340,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 4,
+    sub: SUB_DATA,
   },
   {
     name: 'flowers&plants',
@@ -283,6 +356,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'games&entertainment',
@@ -298,6 +372,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'photography_equipment',
@@ -313,6 +388,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'office&business',
@@ -328,6 +404,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
   {
     name: 'home&garden',
@@ -343,6 +420,7 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 4,
+    sub: SUB_DATA,
   },
   {
     name: 'travel&tourism',
@@ -358,5 +436,6 @@ export const CATEGORIES_DATA: Category[] = [
       ],
     },
     rating: 0,
+    sub: SUB_DATA,
   },
 ]

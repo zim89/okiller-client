@@ -51,6 +51,6 @@
 
 @layer components {
   .btn-icon {
-    @apply text-primary-foreground;
+    @apply text-primary-foreground transition-colors duration-300 hover:text-accent;
   }
 }

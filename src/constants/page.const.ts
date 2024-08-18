@@ -1,8 +1,11 @@
 class PublicPages {
-  HOME = "/";
-  LOGIN = "/login";
-  REGISTER = "/register";
-  PROFILE = "/profile";
+  HOME = '/'
+  // Category
+  // Catalog
+  // Auth
+  LOGIN = '/login'
+  REGISTER = '/register'
+  PROFILE = '/profile'
 }
 
-export const PUBLIC_PAGES = new PublicPages();
+export const PUBLIC_PAGES = new PublicPages()
