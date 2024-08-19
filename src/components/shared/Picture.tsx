@@ -13,7 +13,9 @@ export const Picture = ({
   type?: string
   styles?: string
 }) => {
-  const MEDIA_QUERIES = ['(min-width: 1440px)', '(min-width: 320px)']
+  console.log(srcset.map(srcset => srcset.items[0]))
+
+  const MEDIA_QUERIES = ['(min-width: 1280px)']
   return (
     <picture>
       {srcset.map((srcset, index) => (
@@ -21,7 +23,7 @@ export const Picture = ({
           type={type}
           key={srcset.width}
           media={MEDIA_QUERIES[index]}
-          srcSet={`${srcset.items[0]}, ${srcset.items[1]} 2x`}
+          srcSet={`${srcset.items[0]} 1x, ${srcset.items[1]} 2x`}
         />
       ))}
       <img
