@@ -2,14 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: 0, 0, 98%;
+  border-radius: 60px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #292c6d;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a4ff;
+}
+
 @layer base {
   :root {
+    --aside-nav-width: 310px;
+    --extra-padding: 370px;
     --background: 0 0% 98%;
     --foreground: 0 0% 20%;
     --primary: 237 45% 29%;
     --primary-foreground: 0 0% 98%;
     --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary-foreground: 237 100% 81%;
     --muted: 0 0% 85%;
     --muted-foreground: 0 0% 98%;
     --accent: 237 70% 61%;

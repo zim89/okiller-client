@@ -2,21 +2,29 @@ import React from 'react'
 import { Button } from '@/components/ui/button.tsx'
 import { HeartIcon } from '@/components/ui/icons-pack.tsx'
 import { Picture } from '@/components/shared/Picture.tsx'
+import { cn } from '@/lib/utils.ts'
 import { Item } from '@/data/bestDeals.data.ts'
 
 interface ItemCardProps {
   image: Item['image']
   description: string
   price: string
+  className?: string
 }
 
 export const ItemCard: React.FC<ItemCardProps> = ({
   image,
   description,
   price,
+  className,
 }) => {
   return (
-    <div className='flex w-[173px] flex-col gap-[15px] xl:w-[305px]'>
+    <div
+      className={cn(
+        'flex w-[173px] flex-col gap-[15px] xl:w-[305px]',
+        className,
+      )}
+    >
       <div className='relative cursor-pointer'>
         <Picture
           src={image.src}
