@@ -13,8 +13,6 @@ export const Picture = ({
   type?: string
   styles?: string
 }) => {
-  console.log(srcset.map(srcset => srcset.items[0]))
-
   const MEDIA_QUERIES = ['(min-width: 1280px)']
   return (
     <picture>

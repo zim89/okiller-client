@@ -88,7 +88,7 @@ export const Hero = () => {
       </CarouselNext>
 
       {/* DOTS */}
-      <div className='absolute bottom-[7px] left-1/2 flex -translate-y-1/2 items-center gap-1'>
+      <div className='absolute bottom-[7px] left-1/2 flex -translate-x-1/2 items-center gap-1'>
         {Array.from({ length: count }).map((_, index) => {
           const isActive = index === current - 1
 
