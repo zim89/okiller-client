@@ -20,9 +20,9 @@ export const PopularCategories = () => {
         <SectionTitle title='Popular categories' />
 
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-          <div className='mb-[43px]'>
-            <ul className='grid grid-cols-2 gap-x-2.5 gap-y-8 xl:grid-cols-7 xl:gap-x-[38px]'>
-              {categories.slice(0, isDesktop ? 7 : 6).map(cat => (
+          <div className='mb-[45px]'>
+            <ul className='grid grid-cols-2 gap-x-2.5 gap-y-[45px] xl:grid-cols-7 xl:gap-x-[38px]'>
+              {categories.slice(0, isDesktop ? 14 : 6).map(cat => (
                 <li key={cat.name}>
                   <Link to={`/`} className='space-y-[15px]'>
                     <div className='size-[172px] rounded-full xl:size-[150px]'>
@@ -31,6 +31,7 @@ export const PopularCategories = () => {
                         alt={cat.image.alt}
                         srcset={cat.image.srcset}
                         type={cat.image.type}
+                        styles='rounded-full'
                       />
                     </div>
                     <h3 className='line-clamp-1 text-center text-base/[20.8px]'>
@@ -41,9 +42,9 @@ export const PopularCategories = () => {
               ))}
             </ul>
             <CollapsibleContent>
-              <ul className='mt-[15px] grid grid-cols-2 gap-x-2.5 gap-y-8 xl:grid-cols-7 xl:gap-x-[38px]'>
+              <ul className='mt-[45px] grid grid-cols-2 gap-x-2.5 gap-y-8 xl:grid-cols-7 xl:gap-x-[38px]'>
                 {categories
-                  .slice(isDesktop ? 7 : 6, categories.length)
+                  .slice(isDesktop ? 14 : 6, categories.length)
                   .map(cat => (
                     <li key={cat.name} className='space-y-[15px]'>
                       <div className='size-[172px] rounded-full xl:size-[150px]'>

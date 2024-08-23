@@ -19,14 +19,14 @@ export const Footer = () => {
             <a
               href='#'
               aria-label='Instagram'
-              className='transition-colors hover:text-muted-foreground'
+              className='transition-colors duration-300 hover:text-accent'
             >
               <InstagramIcon />
             </a>
             <a
               href='#'
               aria-label='Facebook'
-              className='transition-colors hover:text-muted-foreground'
+              className='transition-colors duration-300 hover:text-accent'
             >
               <FacebookIcon />
             </a>

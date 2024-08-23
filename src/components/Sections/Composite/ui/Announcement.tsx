@@ -2,7 +2,7 @@ import { PenIcon } from '@/components/ui/icons-pack'
 
 export const Announcement = () => {
   return (
-    <div className='w-[305px] flex-none space-y-7 rounded-[15px] border border-border/60 pb-[89px] pl-[35px] pt-[99px]'>
+    <div className='max-h-[329px] w-[305px] flex-none space-y-7 rounded-[15px] border border-border/60 pb-[89px] pl-[35px] pt-[99px]'>
       <h2 className='w-[189px] text-[24px]/[28.6px] font-medium'>
         Add your own announcement
       </h2>

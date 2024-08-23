@@ -43,7 +43,7 @@ export const Hero = () => {
               src={item.src}
               srcset={item.srcset}
               alt={item.alt}
-              styles='w-full'
+              styles='w-full max-h-[329px] rounded-[15px]'
             />
           </CarouselItem>
         ))}

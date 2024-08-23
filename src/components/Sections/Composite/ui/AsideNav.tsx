@@ -1,5 +1,6 @@
 import { ChevronRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { CommentIcon, TruckIcon } from '@/components/ui/icons-pack.tsx'
 import {
   Menubar,
   MenubarContent,
@@ -7,6 +8,7 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from '@/components/ui/menubar'
+import { Separator } from '@/components/ui'
 import { CATEGORIES_DATA } from '@/data/categories.data'
 
 export const AsideNav = () => {
@@ -17,7 +19,7 @@ export const AsideNav = () => {
           {CATEGORIES_DATA.map(cat => (
             <li key={cat.name}>
               <MenubarMenu key={cat.name}>
-                <MenubarTrigger className='flex w-full cursor-pointer items-center justify-between gap-2 rounded-[81px] border-0 px-[17px] py-[5px] text-base/4 font-normal transition-colors duration-300 hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground'>
+                <MenubarTrigger className='flex w-full cursor-pointer items-center justify-between gap-3 rounded-[81px] border-0 py-0.5 pl-1 pr-0 text-base/4 font-normal transition-colors duration-300 hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground'>
                   <cat.icon />
                   <p className='flex-1 text-start'>{cat.title}</p>
                   <ChevronRight />
@@ -51,6 +53,19 @@ export const AsideNav = () => {
           ))}
         </ul>
       </Menubar>
+      <div className='flex w-[285px] items-center justify-center py-[27px]'>
+        <Separator className='w-[255px] bg-muted' />
+      </div>
+      <div className='felx flex-col space-y-2'>
+        <div className='flex w-[271px] cursor-pointer items-center justify-between gap-3 rounded-[81px] py-0.5 pl-1 transition-colors duration-300 hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground'>
+          <TruckIcon />
+          <p className='flex-1'>Track your parcel</p>
+        </div>
+        <div className='flex w-[271px] cursor-pointer items-center justify-between gap-3 rounded-[81px] py-0.5 pl-1 transition-colors duration-300 hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground'>
+          <CommentIcon />
+          <p className='flex-1'>Help center</p>
+        </div>
+      </div>
     </aside>
   )
 }

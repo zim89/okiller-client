@@ -1,27 +1,42 @@
+import { FC } from 'react'
 import arts_crafts_375_x2 from '@/assets/images/categories/arts&crafts-375-x2.png'
 import arts_crafts_375 from '@/assets/images/categories/arts&crafts-375.png'
 import arts_crafts_1440_x2 from '@/assets/images/categories/arts&crafts-1440-x2.png'
 import arts_crafts_1440 from '@/assets/images/categories/arts&crafts-1440.png'
+import automotive_1440_x2 from '@/assets/images/categories/automotive_1440_x2.png'
 import beauty_health_375_x2 from '@/assets/images/categories/beauty&health-375-x2.png'
 import beauty_health_375 from '@/assets/images/categories/beauty&health-375.png'
 import beauty_health_1440_x2 from '@/assets/images/categories/beauty&health-1440-x2.png'
 import beauty_health_1440 from '@/assets/images/categories/beauty&health-1440.png'
+import books_1440_x2 from '@/assets/images/categories/books_1440_x2.png'
+import children_1440_x2 from '@/assets/images/categories/childrens_1440_x2.png'
 import clothing_375_x2 from '@/assets/images/categories/clothing-375-x2.png'
 import clothing_375 from '@/assets/images/categories/clothing-375.png'
 import clothing_1440_x2 from '@/assets/images/categories/clothing-1440-x2.png'
 import clothing_1440 from '@/assets/images/categories/clothing-1440.png'
+import construction_1440_x2 from '@/assets/images/categories/construction_1440_x2.png'
 import electronics_375_x2 from '@/assets/images/categories/electronics-375-x2.png'
 import electronics_375 from '@/assets/images/categories/electronics-375.png'
 import electronics_1440_x2 from '@/assets/images/categories/electronics-1440-x2.png'
 import electronics_1440 from '@/assets/images/categories/electronics-1440.png'
+import flowers_1440_x2 from '@/assets/images/categories/flowers_1440_x2.png'
+import food_1440_x2 from '@/assets/images/categories/food_1440_x2.png'
+import furniture_1440_x2 from '@/assets/images/categories/furniture_1440_x2.png'
+import games_1440_x2 from '@/assets/images/categories/games_1440_x2.png'
+import gifts_1440_x2 from '@/assets/images/categories/gifts_1440_x2.png'
 import home_garden_375_x2 from '@/assets/images/categories/home&garden-375-x2.png'
 import home_garden_375 from '@/assets/images/categories/home&garden-375.png'
 import home_garden_1440_x2 from '@/assets/images/categories/home&garden-1440-x2.png'
 import home_garden_1440 from '@/assets/images/categories/home&garden-1440.png'
+import musical_1440_x2 from '@/assets/images/categories/musical_1440_x2.png'
+import office_1440_x2 from '@/assets/images/categories/office_1440_x2.png'
 import pets_375_x2 from '@/assets/images/categories/pets-375-x2.png'
 import pets_375 from '@/assets/images/categories/pets-375.png'
 import pets_1440_x2 from '@/assets/images/categories/pets-1440-x2.png'
 import pets_1440 from '@/assets/images/categories/pets-1440.png'
+import photography_1440_x2 from '@/assets/images/categories/photography_1440_x2.png'
+import sports_1440_x2 from '@/assets/images/categories/sports_1440_x2.png'
+import travel_1440_x2 from '@/assets/images/categories/travel_1440_x2.png'
 import {
   AppleIcon,
   BabyCarriageIcon,
@@ -53,7 +68,7 @@ interface SubCategory {
 interface Category {
   name: string
   title: string
-  icon: React.FC
+  icon: FC
   image: {
     alt: string
     src: string
@@ -127,8 +142,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: clothing_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [clothing_375, clothing_375_x2] },
         { width: 1440, items: [clothing_1440, clothing_1440_x2] },
+        { width: 375, items: [clothing_375, clothing_375_x2] },
       ],
     },
     rating: 4,
@@ -143,8 +158,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
         { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [electronics_375, electronics_375_x2] },
       ],
     },
     rating: 4,
@@ -159,8 +174,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: beauty_health_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [beauty_health_375, beauty_health_375_x2] },
         { width: 1440, items: [beauty_health_1440, beauty_health_1440_x2] },
+        { width: 375, items: [beauty_health_375, beauty_health_375_x2] },
       ],
     },
     rating: 4,
@@ -175,8 +190,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: beauty_health_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [beauty_health_375, beauty_health_375_x2] },
-        { width: 1440, items: [beauty_health_1440, beauty_health_1440_x2] },
+        { width: 1440, items: [children_1440_x2, children_1440_x2] },
+        { width: 375, items: [children_1440_x2, children_1440_x2] },
       ],
     },
     rating: 0,
@@ -191,8 +206,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [sports_1440_x2, sports_1440_x2] },
+        { width: 1440, items: [sports_1440_x2, sports_1440_x2] },
       ],
     },
     rating: 0,
@@ -207,8 +222,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [automotive_1440_x2, automotive_1440_x2] },
+        { width: 1440, items: [automotive_1440_x2, automotive_1440_x2] },
       ],
     },
     rating: 0,
@@ -223,8 +238,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [books_1440_x2, books_1440_x2] },
+        { width: 1440, items: [books_1440_x2, books_1440_x2] },
       ],
     },
     rating: 0,
@@ -239,8 +254,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [food_1440_x2, food_1440_x2] },
+        { width: 1440, items: [food_1440_x2, food_1440_x2] },
       ],
     },
     rating: 0,
@@ -255,8 +270,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [gifts_1440_x2, gifts_1440_x2] },
+        { width: 1440, items: [gifts_1440_x2, gifts_1440_x2] },
       ],
     },
     rating: 0,
@@ -271,8 +286,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: pets_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [pets_375, pets_375_x2] },
         { width: 1440, items: [pets_1440, pets_1440_x2] },
+        { width: 375, items: [pets_375, pets_375_x2] },
       ],
     },
     rating: 4,
@@ -287,8 +302,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [furniture_1440_x2, furniture_1440_x2] },
+        { width: 1440, items: [furniture_1440_x2, furniture_1440_x2] },
       ],
     },
     rating: 0,
@@ -303,8 +318,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [construction_1440_x2, construction_1440_x2] },
+        { width: 1440, items: [construction_1440_x2, construction_1440_x2] },
       ],
     },
     rating: 0,
@@ -319,8 +334,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [musical_1440_x2, musical_1440_x2] },
+        { width: 1440, items: [musical_1440_x2, musical_1440_x2] },
       ],
     },
     rating: 0,
@@ -335,8 +350,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: arts_crafts_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [arts_crafts_375, arts_crafts_375_x2] },
         { width: 1440, items: [arts_crafts_1440, arts_crafts_1440_x2] },
+        { width: 375, items: [arts_crafts_375, arts_crafts_375_x2] },
       ],
     },
     rating: 4,
@@ -351,8 +366,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [flowers_1440_x2, flowers_1440_x2] },
+        { width: 1440, items: [flowers_1440_x2, flowers_1440_x2] },
       ],
     },
     rating: 0,
@@ -367,8 +382,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [games_1440_x2, games_1440_x2] },
+        { width: 1440, items: [games_1440_x2, games_1440_x2] },
       ],
     },
     rating: 0,
@@ -383,8 +398,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [photography_1440_x2, photography_1440_x2] },
+        { width: 1440, items: [photography_1440_x2, photography_1440_x2] },
       ],
     },
     rating: 0,
@@ -399,8 +414,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [office_1440_x2, office_1440_x2] },
+        { width: 1440, items: [office_1440_x2, office_1440_x2] },
       ],
     },
     rating: 0,
@@ -415,8 +430,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: home_garden_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [home_garden_375, home_garden_375_x2] },
         { width: 1440, items: [home_garden_1440, home_garden_1440_x2] },
+        { width: 375, items: [home_garden_375, home_garden_375_x2] },
       ],
     },
     rating: 4,
@@ -431,8 +446,8 @@ export const CATEGORIES_DATA: Category[] = [
       src: electronics_375,
       type: 'image/png',
       srcset: [
-        { width: 375, items: [electronics_375, electronics_375_x2] },
-        { width: 1440, items: [electronics_1440, electronics_1440_x2] },
+        { width: 375, items: [travel_1440_x2, travel_1440_x2] },
+        { width: 1440, items: [travel_1440_x2, travel_1440_x2] },
       ],
     },
     rating: 0,
