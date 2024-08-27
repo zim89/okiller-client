@@ -1,19 +1,94 @@
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button.tsx'
 import { FacebookIcon, InstagramIcon } from '@/components/ui/icons-pack.tsx'
 import { Separator } from '@/components/ui/separator.tsx'
-import { footerContent } from '@/data/links.data.ts'
 
 export const Footer = () => {
+  const { t } = useTranslation()
+  const footerContent = [
+    {
+      title: t('footerContent.aboutCompany.title'),
+      items: [
+        { label: t('footerContent.aboutCompany.items.aboutUs'), link: '#' },
+        { label: t('footerContent.aboutCompany.items.careers'), link: '#' },
+        { label: t('footerContent.aboutCompany.items.partners'), link: '#' },
+        { label: t('footerContent.aboutCompany.items.contactUs'), link: '#' },
+        {
+          label: t('footerContent.aboutCompany.items.forInvestors'),
+          link: '#',
+        },
+        {
+          label: t('footerContent.aboutCompany.items.legalInformation'),
+          link: '#',
+        },
+        {
+          label: t('footerContent.aboutCompany.items.privacyPolicy'),
+          link: '#',
+        },
+        { label: t('footerContent.aboutCompany.items.termsOfUse'), link: '#' },
+      ],
+    },
+    {
+      title: t('footerContent.forBuyers.title'),
+      items: [
+        { label: t('footerContent.forBuyers.items.catalog'), link: '#' },
+        {
+          label: t('footerContent.forBuyers.items.dealsAndDiscounts'),
+          link: '#',
+        },
+        { label: t('footerContent.forBuyers.items.howToOrder'), link: '#' },
+        { label: t('footerContent.forBuyers.items.paymentMethods'), link: '#' },
+        {
+          label: t('footerContent.forBuyers.items.shippingAndPickup'),
+          link: '#',
+        },
+        {
+          label: t('footerContent.forBuyers.items.returnsAndExchanges'),
+          link: '#',
+        },
+        { label: t('footerContent.forBuyers.items.faq'), link: '#' },
+        { label: t('footerContent.forBuyers.items.myAccount'), link: '#' },
+        {
+          label: t('footerContent.forBuyers.items.customerSupport'),
+          link: '#',
+        },
+      ],
+    },
+    {
+      title: t('footerContent.forSellers.title'),
+      items: [
+        {
+          label: t('footerContent.forSellers.items.howToStartSelling'),
+          link: '#',
+        },
+        {
+          label: t('footerContent.forSellers.items.sellerRegistration'),
+          link: '#',
+        },
+        {
+          label: t('footerContent.forSellers.items.pricingAndFees'),
+          link: '#',
+        },
+        {
+          label: t('footerContent.forSellers.items.orderProcessing'),
+          link: '#',
+        },
+        {
+          label: t('footerContent.forSellers.items.rulesAndPolicies'),
+          link: '#',
+        },
+        { label: t('footerContent.forSellers.items.sellerSupport'), link: '#' },
+      ],
+    },
+  ]
+
   return (
     <footer className='mt-[115px] rounded-t-md bg-primary pt-[71px] text-primary-foreground'>
       <div className='flex flex-col px-[10px] xl:container xl:flex-row'>
         <div className='pr-[74px] xl:w-1/2 xl:pr-[177px]'>
           <h2 className='text-4xl font-semibold xl:text-5xl'>OLX Killer</h2>
           <p className='max-w-[454px] pt-[15px] text-sm text-muted-foreground xl:text-base'>
-            Our marketplace is a one-stop platform that connects thousands of
-            sellers and buyers. We offer a wide range of products, including
-            clothing and accessories, electronics, home and garden products,
-            baby products, and more.
+            {t('footerContent.footerMessage')}
           </p>
           <div className='-ml-[10px] mt-10 hidden gap-[10px] xl:flex'>
             <a
@@ -55,13 +130,13 @@ export const Footer = () => {
       <div className='px-[10px] pt-[60px] xl:container xl:pt-[119px]'>
         <Separator className='bg-muted' />
         <div className='flex flex-col-reverse items-center justify-between gap-[30px] pb-[18px] pt-[60px] xl:flex-row xl:py-5'>
-          <p>2024 OLX KILLER. All rights reserved</p>
+          <p>2024 OLX KILLER. {t('footerContent.rights')}</p>
           <Button
             onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}
             variant='outline'
             className='h-[42px] bg-primary px-[45px] py-[13px]'
           >
-            Back to top
+            {t('buttons.backToTop')}
           </Button>
         </div>
       </div>

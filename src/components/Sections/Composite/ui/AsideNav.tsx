@@ -1,4 +1,5 @@
 import { ChevronRight } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { CommentIcon, TruckIcon } from '@/components/ui/icons-pack.tsx'
 import {
@@ -12,6 +13,7 @@ import { Separator } from '@/components/ui'
 import { CATEGORIES_DATA } from '@/data/categories.data'
 
 export const AsideNav = () => {
+  const { t } = useTranslation()
   return (
     <aside className='w-[310px]'>
       <Menubar className='h-auto rounded-none border-0 p-0'>
@@ -53,17 +55,17 @@ export const AsideNav = () => {
           ))}
         </ul>
       </Menubar>
-      <div className='flex w-[285px] items-center justify-center py-[27px]'>
-        <Separator className='w-[255px] bg-muted' />
+      <div className='flex items-center justify-center py-[27px] pr-[43px]'>
+        <Separator className='bg-muted' />
       </div>
       <div className='felx flex-col space-y-2'>
         <div className='flex w-[271px] cursor-pointer items-center justify-between gap-3 rounded-[81px] py-0.5 pl-1 transition-colors duration-300 hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground'>
           <TruckIcon />
-          <p className='flex-1'>Track your parcel</p>
+          <p className='flex-1'>{t('asideLinks.trackParcel')}</p>
         </div>
         <div className='flex w-[271px] cursor-pointer items-center justify-between gap-3 rounded-[81px] py-0.5 pl-1 transition-colors duration-300 hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground'>
           <CommentIcon />
-          <p className='flex-1'>Help center</p>
+          <p className='flex-1'>{t('asideLinks.helpCenter')}</p>
         </div>
       </div>
     </aside>
