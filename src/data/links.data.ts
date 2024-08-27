@@ -37,4 +37,4 @@ export const footerContent = [
       { label: 'Seller Support', link: '#' },
     ],
   },
-];
+]

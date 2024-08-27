@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   Carousel,
   CarouselContent,
@@ -39,6 +40,7 @@ export const NewProductsSlider = () => {
     )
   }
   const dealPairs = chunkArray(newProducts, 2)
+  const { t } = useTranslation()
 
   return (
     <Carousel
@@ -49,7 +51,7 @@ export const NewProductsSlider = () => {
         loop: true,
       }}
     >
-      <SectionTitle title='New Products' />
+      <SectionTitle title={t('titles.newProductsTitle')} />
       <CarouselContent>
         {dealPairs.map((pair, index) => (
           <CarouselItem key={index} className='flex gap-[10px]'>

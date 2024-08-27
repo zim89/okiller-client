@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { LANGUAGES } from '@/utils/i18next/constants.ts'
+import i18n from 'i18next'
 import {
   Select,
   SelectContent,
@@ -7,12 +9,18 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 
-const LANGUAGES = { EN: 'EN - English', UA: 'UA - Українська' }
-
 export const LangSwitcher = () => {
-  const [value, setValue] = useState('EN')
+  // Initialize the state with the value from localStorage or default to 'EN'
+  const initialLang = localStorage.getItem('language')?.toUpperCase() || 'EN'
+  const [value, setValue] = useState(initialLang)
+  const handleChangeLanguage = (newLang: keyof typeof LANGUAGES) => {
+    setValue(newLang)
+    const lngIsoCode = LANGUAGES[newLang][0]
+    i18n.changeLanguage(lngIsoCode) // Change the language using i18n
+    localStorage.setItem('language', newLang) // Save the selected language to localStorage
+  }
   return (
-    <Select value={value} onValueChange={setValue}>
+    <Select value={value} onValueChange={handleChangeLanguage}>
       <SelectTrigger className='w-[35px] border-0 bg-primary p-0 text-[13px] text-primary-foreground ring-0 ring-offset-0 transition-colors duration-300 hover:text-accent focus:ring-0 focus:ring-offset-0 data-[state=open]:text-accent'>
         <SelectValue>{value}</SelectValue>
       </SelectTrigger>
@@ -21,13 +29,13 @@ export const LangSwitcher = () => {
           value='EN'
           className='cursor-pointer rounded-none text-[13px] font-medium transition-colors duration-300 focus:bg-background focus:text-accent data-[state=open]:text-accent'
         >
-          {LANGUAGES.EN}
+          {LANGUAGES.EN[1]}
         </SelectItem>
         <SelectItem
           className='cursor-pointer rounded-none text-[13px] font-medium transition-colors duration-300 focus:bg-background focus:text-accent data-[state=open]:text-accent'
           value='UA'
         >
-          {LANGUAGES.UA}
+          {LANGUAGES.UA[1]}
         </SelectItem>
       </SelectContent>
     </Select>

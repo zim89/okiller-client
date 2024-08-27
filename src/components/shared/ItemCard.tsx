@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button.tsx'
 import { HeartIcon } from '@/components/ui/icons-pack.tsx'
 import { Picture } from '@/components/shared/Picture.tsx'
@@ -18,6 +19,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
   price,
   className,
 }) => {
+  const { t } = useTranslation()
   return (
     <div
       className={cn(
@@ -38,10 +40,14 @@ export const ItemCard: React.FC<ItemCardProps> = ({
         </div>
       </div>
       <div className='mt-[10px] flex h-6 items-center justify-between xl:mt-5'>
-        <span className='text-foreground xl:text-2xl'>{price} UAH</span>
+        <span className='text-foreground xl:text-2xl'>
+          {price} {t('currency')}
+        </span>
         <HeartIcon className='hidden cursor-pointer xl:block' />
       </div>
-      <Button className='rounded-lg py-3 leading-none'>Buy</Button>
+      <Button className='rounded-lg py-3 leading-none'>
+        {t('buttons.buy')}
+      </Button>
     </div>
   )
 }
