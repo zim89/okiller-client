@@ -1,6 +1,6 @@
-import { Logo } from '@/shared/ui/logo.tsx'
-import { SearchBar } from '../../fetures/search-bar/search-bar.tsx'
-import { NavToolbar } from './ui/nav-toolbar.tsx'
+import { SearchBar } from '@/features/search-bar'
+import { Logo } from '@/shared/ui'
+import { NavToolbar } from './ui/nav-toolbar'
 
 export const Header = () => {
   return (

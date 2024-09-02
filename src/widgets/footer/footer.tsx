@@ -1,11 +1,12 @@
-import { FacebookIcon, InstagramIcon } from '@/shared/assets/icons-pack.tsx'
+import { FacebookIcon, InstagramIcon } from '@/shared/ui/icons-pack.tsx'
 import { Button } from '@/shared/ui/shadcn-ui/button.tsx'
 import { Separator } from '@/shared/ui/shadcn-ui/separator.tsx'
 import { useTranslation } from 'react-i18next'
 
 export const Footer = () => {
   const { t } = useTranslation()
-  const footerContent = [
+
+  const FOOTER_CONTENT = [
     {
       title: t('footerContent.aboutCompany.title'),
       items: [
@@ -108,7 +109,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className='grid grid-cols-2 gap-[49px] whitespace-nowrap pt-[76px] xl:grid-cols-3 xl:gap-24 xl:pt-0'>
-          {footerContent.map((section, index) => (
+          {FOOTER_CONTENT.map((section, index) => (
             <div key={index}>
               <h3 className='mb-5 font-semibold'>{section.title}</h3>
               <ul className='flex flex-col gap-3'>

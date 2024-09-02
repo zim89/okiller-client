@@ -28,5 +28,9 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "src/entities/template/api/.gitkeep",
+    "src/entities/product/.gitkeep"
+  ]
 }

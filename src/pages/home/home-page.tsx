@@ -1,19 +1,20 @@
-import { BestDeals, NewProductsSlider, PromoSection } from '@/fetures'
-import { PopularCategories } from '@/fetures/categories/popular-categories.tsx'
-import { MainSlider } from '@/fetures/main-slider'
-import { HeroSection } from '@/widgets/hero'
+import { BestDeals } from '@/widgets/best-deals'
+import { PopularCategories } from '@/widgets/category-popular'
+import { Hero, HeroSlider } from '@/widgets/hero'
+import { NewProductsSlider } from '@/widgets/new-products'
+import { PromoSection } from '@/widgets/promo'
 
 export const HomePage = () => {
   return (
     <div className='overflow-x-hidden pt-[15px] xl:pt-[27px]'>
       <div className='container xl:hidden'>
-        <MainSlider />
+        <HeroSlider />
       </div>
       <div className='container xl:hidden'>
         <NewProductsSlider />
       </div>
       <div className='container hidden xl:block'>
-        <HeroSection />
+        <Hero />
       </div>
 
       <PopularCategories />
