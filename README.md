@@ -22,7 +22,7 @@ src/
 ├── api/
 │   └── axios.ts
 ├── app/
-│   ├── Providers.tsx
+│   ├── providers.tsx
 │   └── routes.tsx
 ├── assets/
 │   └── react.svg
@@ -39,9 +39,9 @@ src/
 ├── hooks/
 │   └── .gitkeep
 ├── layouts/
-│   └── RootLayout.tsx
+│   └── root-layout.tsx
 ├── lib/
-│   └── utils.ts
+│   └── cn-merge.ts
 ├── pages/
 │   ├── Home/
 │   └── Profile/
