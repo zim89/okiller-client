@@ -1,8 +1,8 @@
-import { PUBLIC_PAGES } from '@/app/routes/page.const.ts'
 import { HomePage } from '@/pages/home/home-page.tsx'
+import { RootLayout } from '@/pages/layouts'
 import { ProfilePage } from '@/pages/profile/profile-page.tsx'
+import { PUBLIC_PAGES } from '@/shared/const/page.const'
 import { createBrowserRouter } from 'react-router-dom'
-import { RootLayout } from '../../pages/root-layout.tsx'
 
 export const router = createBrowserRouter([
   {
