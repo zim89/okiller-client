@@ -1,8 +1,9 @@
-import { getContentType } from '@/shared/api/api.helpers.ts'
 import axios, { CreateAxiosDefaults } from 'axios'
 
+import { getContentType } from '@/shared/api/api.helpers.ts'
+
 const axiosOptions: CreateAxiosDefaults = {
-  baseURL: process.env.BASE_URL,
+  baseURL: import.meta.env.BASE_URL,
   headers: getContentType(),
   withCredentials: true,
 }

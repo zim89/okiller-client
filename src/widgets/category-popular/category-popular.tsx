@@ -1,18 +1,19 @@
 import { useState } from 'react'
+import { CollapsibleContent } from '@radix-ui/react-collapsible'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import { CATEGORIES } from '@/entities/category'
 import {
   Collapsible,
-  CollapsibleContent,
   CollapsibleTrigger,
-} from '@/shared/ui/shadcn-ui/collapsible.tsx'
+} from '@/shared/ui/shadcn-ui/collapsible'
 import { Picture, SectionTitle } from '@/shared/ui'
 import { useMediaQuery } from '@/shared/lib/hooks'
 
 export const PopularCategories = () => {
   const [isOpen, setIsOpen] = useState(false)
+
   const isDesktop = useMediaQuery('(min-width: 1440px)')
   const categories = [...CATEGORIES].sort((a, b) => b.rating - a.rating)
   const { t } = useTranslation()
