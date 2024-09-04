@@ -1,1 +1,1 @@
-export { CATEGORIES, type Category } from './api/categories.data'
+export { categoryApi, CATEGORIES, type Category } from './api'

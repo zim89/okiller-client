@@ -1,6 +1,6 @@
-import { instanceBase } from '@/shared/api/axios.ts'
+import { instanceBase } from '@/shared/api'
 
-class CategoryService {
+class CategoryApi {
   private BASE_URL = '/categories'
 
   async getCategories() {
@@ -14,4 +14,4 @@ class CategoryService {
   }
 }
 
-export const categoryService = new CategoryService()
+export const categoryApi = new CategoryApi()

@@ -1,6 +1,7 @@
 import * as React from 'react'
-import { cn } from '@/shared/lib/utils/cn-merge.ts'
 import * as SeparatorPrimitive from '@radix-ui/react-separator'
+
+import { cn } from '@/shared/lib/utils'
 
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>,
@@ -15,7 +16,7 @@ const Separator = React.forwardRef<
       decorative={decorative}
       orientation={orientation}
       className={cn(
-        'bg-muted shrink-0',
+        'shrink-0 bg-muted',
         orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]',
         className,
       )}

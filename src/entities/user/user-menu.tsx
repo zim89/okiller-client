@@ -1,15 +1,16 @@
 import { useState } from 'react'
+import { useAuth0 } from '@auth0/auth0-react'
+import { Spinner } from '@chakra-ui/spinner'
+import { LogInIcon, LogOutIcon } from 'lucide-react'
+import { ErrorIcon } from 'react-hot-toast'
+
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/shared/ui/shadcn-ui/dropdown-menu.tsx'
-import { useAuth0 } from '@auth0/auth0-react'
-import { Spinner } from '@chakra-ui/spinner'
-import { LogInIcon, LogOutIcon } from 'lucide-react'
-import { ErrorIcon } from 'react-hot-toast'
-import { UserButton } from './ui/user-button.tsx'
+import { UserButton } from './ui'
 
 export const UserMenu = () => {
   const { isAuthenticated, user, loginWithRedirect, logout, isLoading, error } =

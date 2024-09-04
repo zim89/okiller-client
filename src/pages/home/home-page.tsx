@@ -7,18 +7,27 @@ import { PromoSection } from '@/widgets/promo'
 export const HomePage = () => {
   return (
     <div className='overflow-x-hidden pt-[15px] xl:pt-[27px]'>
-      <div className='container xl:hidden'>
-        <HeroSlider />
+      <div className='xl:hidden'>
+        <div className='container'>
+          <HeroSlider />
+        </div>
       </div>
-      <div className='container xl:hidden'>
-        <NewProductsSlider />
+
+      <div className='xl:hidden'>
+        <div className='container'>
+          <NewProductsSlider />
+        </div>
       </div>
-      <div className='container hidden xl:block'>
-        <Hero />
+
+      <div className='hidden xl:block'>
+        <div className='container'>
+          <Hero />
+        </div>
       </div>
 
       <PopularCategories />
       <BestDeals />
+
       <PromoSection />
     </div>
   )

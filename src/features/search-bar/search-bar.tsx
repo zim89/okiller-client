@@ -1,5 +1,6 @@
-import { SearchIcon } from '@/shared/ui/icons-pack.tsx'
 import { useTranslation } from 'react-i18next'
+
+import { SearchIcon } from '@/shared/ui'
 import { LangSwitcher } from '../lang-switcher/lang-switcher.tsx'
 
 export const SearchBar = () => {
@@ -10,10 +11,10 @@ export const SearchBar = () => {
         <input
           name='search'
           type='text'
-          className='placeholder:text-foreground w-full rounded-[60px] py-2.5 pl-[48.92px] pr-[105px] focus:outline-none xl:pl-[58.49px] xl:pr-[133.89px]'
+          className='w-full rounded-[60px] py-2.5 pl-[48.92px] pr-[105px] placeholder:text-foreground focus:outline-none xl:pl-[58.49px] xl:pr-[133.89px]'
           placeholder={t('inputs.searchPlaceholder')}
         />
-        <button className='bg-primary text-primary-foreground hover:bg-accent absolute right-[2.81px] top-1/2 flex h-9 w-[91px] -translate-y-1/2 items-center justify-center rounded-[60px] text-[13px] transition-colors duration-300 xl:right-[4.89px] xl:w-[117px]'>
+        <button className='absolute right-[2.81px] top-1/2 flex h-9 w-[91px] -translate-y-1/2 items-center justify-center rounded-[60px] bg-primary text-[13px] text-primary-foreground transition-colors duration-300 hover:bg-accent xl:right-[4.89px] xl:w-[117px]'>
           {t('buttons.searchButton')}
         </button>
         <SearchIcon className='absolute left-[13.07px] top-1/2 -translate-y-1/2 xl:left-[22.49px]' />

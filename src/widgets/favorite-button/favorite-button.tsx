@@ -1,4 +1,4 @@
-import { HeartIcon } from '@/shared/ui/icons-pack.tsx'
+import { HeartIcon } from '@/shared/ui'
 
 export const FavoriteButton = () => {
   return (
