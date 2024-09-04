@@ -1,13 +1,14 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+
 import { BEST_DEALS } from '@/entities/product'
-import { useMediaQuery } from '@/shared/lib/hooks/use-media-query.ts'
-import { SectionTitle } from '@/shared/ui'
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/shared/ui/shadcn-ui/collapsible.tsx'
-import { useTranslation } from 'react-i18next'
+import { SectionTitle } from '@/shared/ui'
+import { useMediaQuery } from '@/shared/lib/hooks'
 import { ProductCard } from '../product-card'
 
 export const BestDeals = () => {
@@ -44,7 +45,7 @@ export const BestDeals = () => {
             ))}
           </div>
         </CollapsibleContent>
-        <CollapsibleTrigger className='border-border hover:bg-accent hover:text-accent-foreground mt-[45px] w-full rounded-[60px] border py-[13px] text-center text-[13px]/[13px] transition-colors duration-300 xl:text-base/4'>
+        <CollapsibleTrigger className='mt-[45px] w-full rounded-[60px] border border-border py-[13px] text-center text-[13px]/[13px] transition-colors duration-300 hover:bg-accent hover:text-accent-foreground xl:text-base/4'>
           {isOpen ? `${t('buttons.showLess')}` : `${t('buttons.loadMore')}`}
         </CollapsibleTrigger>
       </Collapsible>

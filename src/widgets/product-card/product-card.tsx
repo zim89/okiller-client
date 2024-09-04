@@ -1,10 +1,10 @@
 import React from 'react'
-import type { BestDeal } from '@/entities/product'
-import { cn } from '@/shared/lib/utils/cn-merge.ts'
-import { HeartIcon } from '@/shared/ui'
-import { Picture } from '@/shared/ui/picture.tsx'
-import { Button } from '@/shared/ui/shadcn-ui/button.tsx'
 import { useTranslation } from 'react-i18next'
+
+import type { BestDeal } from '@/entities/product'
+import { Button } from '@/shared/ui/shadcn-ui/button.tsx'
+import { HeartIcon, Picture } from '@/shared/ui'
+import { cn } from '@/shared/lib/utils'
 
 interface ItemCardProps {
   image: BestDeal['image']
@@ -36,7 +36,7 @@ export const ProductCard: React.FC<ItemCardProps> = ({
         />
         <div className='mt-[15px]'>
           <HeartIcon className='absolute right-[10px] top-[7px] xl:hidden' />
-          <p className='text-foreground text-sm xl:text-base'>{description}</p>
+          <p className='text-sm text-foreground xl:text-base'>{description}</p>
         </div>
       </div>
       <div className='mt-[10px] flex h-6 items-center justify-between xl:mt-5'>

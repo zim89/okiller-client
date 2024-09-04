@@ -1,7 +1,8 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+
 import { NEW_PRODUCTS } from '@/entities/product'
 import { SectionTitle } from '@/shared/ui'
-import { useTranslation } from 'react-i18next'
 import { ProductCard } from '../product-card'
 
 export const NewProducts: React.FC = () => {

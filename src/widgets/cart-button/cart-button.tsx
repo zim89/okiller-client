@@ -1,4 +1,4 @@
-import { ShoppingCartIcon } from '@/shared/ui/icons-pack.tsx'
+import { ShoppingCartIcon } from '@/shared/ui'
 
 export const CartButton = () => {
   return (

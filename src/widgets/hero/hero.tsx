@@ -1,7 +1,7 @@
-import { AddAnnouncement } from '@/features/announcement/add-announcement'
 import { AsideNav } from '@/widgets/aside-nav'
 import { NewProducts } from '@/widgets/new-products'
-import { HeroSlider } from './ui/hero-slider.tsx'
+import { AddAnnouncement } from '@/features/announcement/add-announcement'
+import { HeroSlider } from './ui'
 
 export const Hero = () => {
   return (

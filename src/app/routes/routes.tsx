@@ -1,8 +1,9 @@
+import { createBrowserRouter } from 'react-router-dom'
+
 import { HomePage } from '@/pages/home/home-page.tsx'
 import { RootLayout } from '@/pages/layouts'
 import { ProfilePage } from '@/pages/profile/profile-page.tsx'
-import { PUBLIC_PAGES } from '@/shared/const/page.const'
-import { createBrowserRouter } from 'react-router-dom'
+import { PUBLIC_PAGES } from '@/shared/constants/page.const'
 
 export const router = createBrowserRouter([
   {

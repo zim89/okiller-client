@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { cn } from '@/shared/lib/utils/cn-merge.ts'
-import { Picture } from '@/shared/ui'
+
 import {
   Carousel,
   CarouselContent,
@@ -9,6 +8,8 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from '@/shared/ui/shadcn-ui/carousel.tsx'
+import { Picture } from '@/shared/ui'
+import { cn } from '@/shared/lib/utils'
 import { HERO_DATA } from '../mock/hero.mock'
 
 export const HeroSlider = () => {
@@ -53,7 +54,7 @@ export const HeroSlider = () => {
       <CarouselPrevious
         variant={null}
         size={null}
-        className='text-primary-foreground left-[7px] xl:hidden'
+        className='left-[7px] text-primary-foreground xl:hidden'
       >
         <svg
           width='18'
@@ -71,7 +72,7 @@ export const HeroSlider = () => {
       <CarouselNext
         variant={null}
         size={null}
-        className='text-primary-foreground right-[7px] xl:hidden'
+        className='right-[7px] text-primary-foreground xl:hidden'
       >
         <svg
           width='18'
@@ -97,7 +98,7 @@ export const HeroSlider = () => {
               key={index}
               onClick={() => api?.scrollTo(index)}
               className={cn(
-                'hover:bg-primary size-2 rounded-full transition-colors duration-300',
+                'size-2 rounded-full transition-colors duration-300 hover:bg-primary',
                 isActive ? 'bg-primary' : 'bg-primary-foreground',
               )}
             />

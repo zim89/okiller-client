@@ -1,6 +1,6 @@
-import { UserMenu } from '@/entities/user'
 import { CartButton } from '@/widgets/cart-button'
 import { FavoriteButton } from '@/widgets/favorite-button'
+import { UserMenu } from '@/entities/user'
 
 export const NavToolbar = () => {
   return (

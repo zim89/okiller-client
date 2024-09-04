@@ -19,6 +19,7 @@ export const HomePage = () => {
 
       <PopularCategories />
       <BestDeals />
+
       <PromoSection />
     </div>
   )

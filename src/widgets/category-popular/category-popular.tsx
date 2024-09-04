@@ -1,14 +1,15 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+
 import { CATEGORIES } from '@/entities/category'
-import { useMediaQuery } from '@/shared/lib/hooks/use-media-query.ts'
-import { Picture, SectionTitle } from '@/shared/ui'
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/shared/ui/shadcn-ui/collapsible.tsx'
-import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Picture, SectionTitle } from '@/shared/ui'
+import { useMediaQuery } from '@/shared/lib/hooks'
 
 export const PopularCategories = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -73,7 +74,7 @@ export const PopularCategories = () => {
             </CollapsibleContent>
           </div>
 
-          <CollapsibleTrigger className='border-border hover:bg-accent hover:text-accent-foreground w-full rounded-[60px] border py-[13px] text-center text-[13px]/[13px] transition-colors duration-300 xl:text-base/4'>
+          <CollapsibleTrigger className='w-full rounded-[60px] border border-border py-[13px] text-center text-[13px]/[13px] transition-colors duration-300 hover:bg-accent hover:text-accent-foreground xl:text-base/4'>
             {isOpen
               ? `${t('buttons.showLess')}`
               : `${t('buttons.showAllCategories')}`}

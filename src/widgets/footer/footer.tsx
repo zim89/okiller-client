@@ -1,7 +1,8 @@
-import { FacebookIcon, InstagramIcon } from '@/shared/ui/icons-pack.tsx'
+import { useTranslation } from 'react-i18next'
+
 import { Button } from '@/shared/ui/shadcn-ui/button.tsx'
 import { Separator } from '@/shared/ui/shadcn-ui/separator.tsx'
-import { useTranslation } from 'react-i18next'
+import { FacebookIcon, InstagramIcon } from '@/shared/ui'
 
 export const Footer = () => {
   const { t } = useTranslation()
@@ -84,25 +85,25 @@ export const Footer = () => {
   ]
 
   return (
-    <footer className='bg-primary text-primary-foreground mt-[115px] rounded-t-md pt-[71px]'>
+    <footer className='mt-[115px] rounded-t-md bg-primary pt-[71px] text-primary-foreground'>
       <div className='flex flex-col px-[10px] xl:container xl:flex-row'>
         <div className='pr-[74px] xl:w-1/2 xl:pr-[177px]'>
           <h2 className='text-4xl font-semibold xl:text-5xl'>OLX Killer</h2>
-          <p className='text-muted-foreground max-w-[454px] pt-[15px] text-sm xl:text-base'>
+          <p className='max-w-[454px] pt-[15px] text-sm text-muted-foreground xl:text-base'>
             {t('footerContent.footerMessage')}
           </p>
           <div className='-ml-[10px] mt-10 hidden gap-[10px] xl:flex'>
             <a
               href='#'
               aria-label='Instagram'
-              className='hover:text-accent transition-colors duration-300'
+              className='transition-colors duration-300 hover:text-accent'
             >
               <InstagramIcon />
             </a>
             <a
               href='#'
               aria-label='Facebook'
-              className='hover:text-accent transition-colors duration-300'
+              className='transition-colors duration-300 hover:text-accent'
             >
               <FacebookIcon />
             </a>
@@ -117,7 +118,7 @@ export const Footer = () => {
                   <li key={idx} className='leading-none'>
                     <a
                       href={item.link}
-                      className='before:bg-secondary-500-foreground hover:text-secondary-500-foreground relative inline-block duration-300 before:absolute before:bottom-[-5px] before:left-1/2 before:h-[2px] before:w-0 before:transition-all before:duration-300 before:ease-in-out hover:transition-colors hover:before:left-0 hover:before:w-full'
+                      className='relative inline-block duration-300 before:absolute before:bottom-[-5px] before:left-1/2 before:h-[2px] before:w-0 before:bg-secondary-500-foreground before:transition-all before:duration-300 before:ease-in-out hover:text-secondary-500-foreground hover:transition-colors hover:before:left-0 hover:before:w-full'
                     >
                       {item.label}
                     </a>
@@ -135,7 +136,7 @@ export const Footer = () => {
           <Button
             onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}
             variant='outline'
-            className='bg-primary h-[42px] px-[45px] py-[13px]'
+            className='h-[42px] bg-primary px-[45px] py-[13px]'
           >
             {t('buttons.backToTop')}
           </Button>

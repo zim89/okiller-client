@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+
+import { ProductCard } from '@/widgets/product-card'
 import { NEW_PRODUCTS } from '@/entities/product'
-import { cn } from '@/shared/lib/utils/cn-merge.ts'
-import { SectionTitle } from '@/shared/ui'
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   type CarouselApi,
 } from '@/shared/ui/shadcn-ui/carousel.tsx'
-import { ProductCard } from '@/widgets/product-card'
-import { useTranslation } from 'react-i18next'
+import { SectionTitle } from '@/shared/ui'
+import { cn } from '@/shared/lib/utils'
 
 export const NewProductsSlider = () => {
   const [api, setApi] = useState<CarouselApi>(),
@@ -78,7 +79,7 @@ export const NewProductsSlider = () => {
               key={index}
               onClick={() => api?.scrollTo(index)}
               className={cn(
-                'hover:bg-primary size-2 rounded-full transition-colors duration-300',
+                'size-2 rounded-full transition-colors duration-300 hover:bg-primary',
                 isActive ? 'bg-primary' : 'bg-border',
               )}
             />

@@ -1,4 +1,4 @@
-import { UserIcon } from '@/shared/ui/icons-pack.tsx'
+import { UserIcon } from '@/shared/ui'
 
 export const UserButton = () => {
   return (
