@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import { HomePage } from '@/pages/home/home-page.tsx'
 import { RootLayout } from '@/pages/layouts'
+import { ProductPage } from '@/pages/product/product-page.tsx'
 import { ProfilePage } from '@/pages/profile/profile-page.tsx'
 import { PUBLIC_PAGES } from '@/shared/constants'
 
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
       {
         path: PUBLIC_PAGES.PROFILE,
         element: <ProfilePage />,
+      },
+      {
+        path: PUBLIC_PAGES.PRODUCT,
+        element: <ProductPage />,
       },
     ],
   },
