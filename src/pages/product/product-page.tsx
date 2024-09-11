@@ -12,13 +12,13 @@ export const ProductPage = () => {
   return (
     <div className='container mt-[27px] md:mt-[38px]'>
       <ProductDetails />
-      <div className='mt-[128px] hidden min-h-[277px] md:relative md:block xl:min-h-[493px]'>
+      <div className='mt-20 hidden min-h-[277px] md:relative md:mt-[128px] md:block xl:min-h-[440px]'>
         <ProductsBySeller />
       </div>
       <div className='mt-[61px] md:hidden'>
         <ProductsBySellerSlider />
       </div>
-      <div className='mt-[128px] hidden min-h-[277px] md:relative md:block xl:min-h-[493px]'>
+      <div className='mt-20 hidden min-h-[277px] md:relative md:mt-[128px] md:block xl:min-h-[440px]'>
         <SimilarProducts />
       </div>
       <div className='mt-[80px] md:hidden'>

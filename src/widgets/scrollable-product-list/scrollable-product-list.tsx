@@ -69,9 +69,9 @@ export const ScrollableProductList: React.FC<ScrollableProductListProps> = ({
 
   return (
     <section className={className}>
-      <div className='overflow-x-auto'>
+      <div className='overflow-x-hidden'>
         <div
-          className={`flex flex-row items-center justify-between pl-0`}
+          className={`flex w-full flex-row items-center pl-0 md:gap-28 xl:justify-between`}
           style={{ width: titleWidth }}
         >
           <SectionTitle title={title} />
