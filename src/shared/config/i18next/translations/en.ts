@@ -11,6 +11,8 @@ export const en = {
     buy: 'Buy',
     registerAsSeller: 'Register as a seller',
     backToTop: 'Back to top',
+    writeSeller: 'Write to the seller',
+    showNumber: 'Show number',
   },
   titles: {
     announcementTitle: 'Add your own announcement',
@@ -18,6 +20,8 @@ export const en = {
     popularCategoriesTitle: 'Popular categories',
     sellPromoTitle: 'Do you want to sell on our platform?',
     bestDealsTitle: 'Best deals',
+    productsBySeller: 'Other announcements by this seller',
+    similarProducts: 'Similar products to your request',
   },
   footerContent: {
     footerMessage:

@@ -12,6 +12,8 @@ export const uk = {
     buy: 'Купити',
     registerAsSeller: 'Зареєструйтесь як продавець',
     backToTop: 'До початку',
+    writeSeller: 'Написати продавцю',
+    showNumber: 'Показати номер',
   },
   titles: {
     announcementTitle: 'Додайте своє оголошення',
@@ -19,6 +21,8 @@ export const uk = {
     popularCategoriesTitle: 'Популярні категорії',
     sellPromoTitle: 'Хочете продавати на платформі?',
     bestDealsTitle: 'Найкращі пропозиції',
+    productsBySeller: 'Інші оголошення продавця',
+    similarProducts: 'Схожі товари за вашим запитом',
   },
   footerContent: {
     footerMessage:
