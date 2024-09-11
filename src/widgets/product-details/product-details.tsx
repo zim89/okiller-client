@@ -20,9 +20,11 @@ export const ProductDetails: React.FC<Props> = ({ className }) => {
   return (
     <div className={className}>
       <div className='flex flex-row items-center justify-start gap-2 md:hidden'>
-        <button className='flex h-6 w-6 items-center justify-center'>
-          <ArrowIcon className='rotate-180' />
-        </button>
+        <BreadcrumbLink href='/'>
+          <button className='flex h-6 w-6 items-center justify-center'>
+            <ArrowIcon className='rotate-180' />
+          </button>
+        </BreadcrumbLink>
         <p className='text-[13px]'>Women's T-Shirts</p>
       </div>
       <Breadcrumb className='hidden md:block'>
