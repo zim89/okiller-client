@@ -1,4 +1,5 @@
 import React from 'react'
+import sellerLogo from '@/shared/assets/images/seller/seller_logo.png'
 
 import { FavoriteButton } from '@/widgets/favorite-button'
 import { LoginCard } from '@/widgets/login-card/login-card.tsx'
@@ -25,7 +26,7 @@ const announcement = {
   seller: 'Stylishwear',
   sellerRegisteredAt: 'August 2024',
   sellerLastOnline: 'yesterday at 22:09',
-  sellerLogo: '/src/shared/assets/images/seller/seller_logo.png',
+  sellerLogo: sellerLogo,
   sellerRating: 4.5,
   reviews: 155,
   location: {
