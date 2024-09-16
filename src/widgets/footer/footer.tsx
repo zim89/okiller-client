@@ -85,7 +85,7 @@ export const Footer = () => {
   ]
 
   return (
-    <footer className='mt-[80px] rounded-t-md bg-primary pt-[71px] text-primary-foreground md:mt-[115px]'>
+    <footer className='rounded-t-md bg-primary pt-[71px] text-primary-foreground'>
       <div className='flex flex-col px-[10px] xl:container xl:flex-row'>
         <div className='pr-[74px] xl:w-1/2 xl:pr-[177px]'>
           <h2 className='text-4xl font-semibold xl:text-5xl'>OLX Killer</h2>

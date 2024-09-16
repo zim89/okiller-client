@@ -14,6 +14,7 @@ export const uk = {
     backToTop: 'До початку',
     writeSeller: 'Написати продавцю',
     showNumber: 'Показати номер',
+    filters: 'Фільтри',
   },
   titles: {
     announcementTitle: 'Додайте своє оголошення',
@@ -72,4 +73,7 @@ export const uk = {
     helpCenter: 'Центр підтримки',
   },
   currency: 'грн',
+  crumbs: {
+    home: 'Головна сторінка',
+  },
 }

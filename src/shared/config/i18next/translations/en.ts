@@ -13,6 +13,7 @@ export const en = {
     backToTop: 'Back to top',
     writeSeller: 'Write to the seller',
     showNumber: 'Show number',
+    filters: 'Filters',
   },
   titles: {
     announcementTitle: 'Add your own announcement',
@@ -71,4 +72,7 @@ export const en = {
     helpCenter: 'Help center',
   },
   currency: 'UAH',
+  crumbs: {
+    home: 'Home page',
+  },
 }

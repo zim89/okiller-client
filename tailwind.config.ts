@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss'
 
 const config = {
   darkMode: ['class'],
-  content: ['./src/**/*.{ts,tsx}'],
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
   prefix: '',
   theme: {
     screens: {
@@ -19,22 +19,21 @@ const config = {
       },
     },
     colors: {
-      border: 'hsl(var(--border))', //hsl(0, 0%, 85%)
+      transparent: 'transparent',
+      border: 'hsl(var(--border))', //#d9d9d9
       input: 'hsl(var(--input))', //
-      background: 'hsl(var(--background))', //hsl(0, 0%, 98%)
-      foreground: 'hsl(var(--foreground))', //hsl(0, 0%, 20%)
+      background: 'hsl(var(--background))', //#fafafa
+      foreground: 'hsl(var(--foreground))', //#333333
       primary: {
-        DEFAULT: 'hsl(var(--primary))', //hsl(237 45% 29%)
-        foreground: 'hsl(var(--primary-foreground))', //hsl(0 0% 98%)
+        DEFAULT: 'hsl(var(--primary))', //#292c6b
+        foreground: 'hsl(var(--primary-foreground))', //#fafafa
         gray: 'var(--primary-gray)',
       },
       secondary: {
-        300: {},
         500: {
-          DEFAULT: 'hsl(var(--secondary))', //hsl(210, 40%, 96%)
-          foreground: 'hsl(var(--secondary-foreground))', //hsl(222, 47%, 11%)
+          DEFAULT: 'hsl(var(--secondary))', //#f1f5f9
+          foreground: 'hsl(var(--secondary-foreground))', //#0f1729
         },
-        700: {},
       },
       destructive: {
         DEFAULT: 'hsl(var(--destructive))',
@@ -42,11 +41,15 @@ const config = {
       },
       muted: {
         DEFAULT: 'hsl(var(--muted))', //#d9d9d9
-        foreground: 'hsl(var(--muted-foreground))', //hsl(0 0% 98%)
+        foreground: 'hsl(var(--muted-foreground))', //#fafafa
       },
       accent: {
-        DEFAULT: 'hsl(var(--accent))', //hsl(237 70% 61%)
-        foreground: 'hsl(var(--accent-foreground))', //hsl(0 0% 98%)
+        DEFAULT: 'hsl(var(--accent))', //#565de1
+        foreground: 'hsl(var(--accent-foreground))', //#fafafa
+      },
+      purple: {
+        light: '#EEE3FF',
+        dark: '#7F56D9',
       },
       popover: {
         DEFAULT: 'hsl(var(--popover))',
@@ -56,16 +59,24 @@ const config = {
         DEFAULT: 'hsl(var(--card))',
         foreground: 'hsl(var(--card-foreground))',
       },
+      black: '#000000',
+      gray: {
+        50: '#f9fafb',
+        100: '#f9f9f9',
+        150: '#e8e8e8',
+        200: '#dddddd',
+        400: '#a3a3a3',
+      },
     },
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 20px)',
-        sm: 'calc(var(--radius) - 35px)',
-      },
+      // borderRadius: {
+      //   lg: 'var(--radius)',
+      //   md: 'calc(var(--radius) - 20px)',
+      //   sm: 'calc(var(--radius) - 35px)',
+      // },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },

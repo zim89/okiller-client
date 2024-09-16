@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html body[data-scroll-locked] {
+  --removed-body-scroll-bar-size: 0 !important;
+  margin-right: 0 !important;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
@@ -36,7 +41,7 @@
     --primary-gray: #a3a3a3;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 237 100% 81%;
-    --muted: 0 0% 85%;
+    --muted: 0 0% 85%; /* hsl(0 0% 85%) */
     --muted-foreground: 0 0% 98%;
     --accent: 237 70% 61%;
     --accent-foreground: 0 0% 98%;
@@ -71,6 +76,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -79,5 +85,13 @@
 @layer components {
   .btn-icon {
     @apply text-primary-foreground transition-colors duration-300 hover:text-accent;
+  }
+
+  .btn-primary {
+    @apply flex w-full items-center justify-center rounded-[60px] border border-primary bg-primary py-[13px] text-center text-base/none text-primary-foreground transition-colors duration-300 hover:border-accent hover:bg-accent hover:text-accent-foreground;
+  }
+
+  .btn-secondary {
+    @apply flex w-full items-center justify-center rounded-[60px] border border-gray-200 bg-background py-[13px] text-center text-base/none text-foreground transition-colors duration-300;
   }
 }

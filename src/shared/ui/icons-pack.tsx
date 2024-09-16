@@ -614,3 +614,64 @@ export function FlagIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
+export function ChevronLeftIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width='20'
+      height='20'
+      viewBox='0 0 20 20'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      {...props}
+    >
+      <path
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M12.9067 3.6921C13.1688 3.91674 13.1992 4.3113 12.9745 4.57338L8.32317 9.99997L12.9745 15.4266C13.1992 15.6886 13.1688 16.0832 12.9067 16.3078C12.6447 16.5325 12.2501 16.5021 12.0255 16.24L7.02546 10.4067C6.82485 10.1727 6.82485 9.82728 7.02546 9.59323L12.0255 3.75989C12.2501 3.49781 12.6447 3.46746 12.9067 3.6921Z'
+        fill='currentColor'
+      />
+    </svg>
+  )
+}
+
+export function ChevronRightIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width='20'
+      height='20'
+      viewBox='0 0 20 20'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      {...props}
+    >
+      <path
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M7.09327 3.6921C7.35535 3.46746 7.74991 3.49781 7.97455 3.75989L12.9745 9.59323C13.1752 9.82728 13.1752 10.1727 12.9745 10.4067L7.97455 16.24C7.74991 16.5021 7.35535 16.5325 7.09327 16.3078C6.83119 16.0832 6.80084 15.6886 7.02548 15.4266L11.6768 9.99997L7.02548 4.57338C6.80084 4.3113 6.83119 3.91674 7.09327 3.6921Z'
+        fill='currentColor'
+      />
+    </svg>
+  )
+}
+
+export function CheckedIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width='20'
+      height='20'
+      viewBox='0 0 20 20'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      {...props}
+    >
+      <path
+        d='M16.6663 5L7.49967 14.1667L3.33301 10'
+        stroke='#7F56D9'
+        strokeWidth='1.66667'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}

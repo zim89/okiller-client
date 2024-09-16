@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 
+import { CatalogPage } from '@/pages/catalog/catalog-page'
 import { HomePage } from '@/pages/home/home-page.tsx'
 import { RootLayout } from '@/pages/layouts'
 import { ProductPage } from '@/pages/product/product-page.tsx'
@@ -18,6 +19,16 @@ export const router = createBrowserRouter([
       {
         path: PUBLIC_PAGES.PROFILE,
         element: <ProfilePage />,
+      },
+      {
+        path: PUBLIC_PAGES.CATALOG,
+        element: <CatalogPage />,
+        children: [
+          {
+            path: 'category',
+            element: <CatalogPage />,
+          },
+        ],
       },
       {
         path: PUBLIC_PAGES.PRODUCT,
