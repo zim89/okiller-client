@@ -37,7 +37,7 @@
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss"
   ],
-  "tailwindConfig": "./tailwind.config.mts",
+  "tailwindConfig": "./tailwind.config.ts",
   "tailwindPreserveWhitespace": false,
   "tailwindFunctions": ["clsx", "cn"]
 }
