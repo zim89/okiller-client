@@ -17,9 +17,8 @@ export const CatalogPage = () => {
         <Breadcrumbs crumbs={CRUMBS} />
         <PageHeading title='Women’s clothing' />
         <CategoryCollapsible />
+        <CategorySlider />
       </div>
-
-      <CategorySlider />
 
       <div className='container md:hidden'>
         <div className='mb-[53px] grid grid-cols-2 gap-3'>
